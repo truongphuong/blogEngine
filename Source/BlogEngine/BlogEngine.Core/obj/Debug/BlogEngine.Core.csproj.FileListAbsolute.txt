@@ -18,3 +18,13 @@ C:\rtur\src\be\BlogEngine\BlogEngine.Core\bin\Debug\NuGet.Core.dll
 C:\rtur\src\be\BlogEngine\BlogEngine.Core\obj\Debug\BlogEngine.Core.csprojResolveAssemblyReference.cache
 C:\rtur\src\be\BlogEngine\BlogEngine.Core\obj\Debug\BlogEngine.Core.dll
 C:\rtur\src\be\BlogEngine\BlogEngine.Core\obj\Debug\BlogEngine.Core.pdb
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Core\bin\Debug\BlogEngine.Core.XML
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Core\bin\Debug\BlogEngine.Core.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Core\bin\Debug\BlogEngine.Core.pdb
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Core\bin\Debug\AjaxMin.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Core\bin\Debug\BlogML.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Core\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Core\bin\Debug\NuGet.Core.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Core\obj\Debug\BlogEngine.Core.csprojResolveAssemblyReference.cache
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Core\obj\Debug\BlogEngine.Core.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Core\obj\Debug\BlogEngine.Core.pdb

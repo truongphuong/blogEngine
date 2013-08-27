@@ -7,3 +7,13 @@ C:\Users\Ruslan\Src\Codeplex\be\BlogEngine\BlogEngine.Tests\bin\Debug\nunit.fram
 C:\Users\Ruslan\Src\Codeplex\be\BlogEngine\BlogEngine.Tests\bin\Debug\WatiN.Core.xml
 C:\Users\Ruslan\Src\Codeplex\be\BlogEngine\BlogEngine.Tests\obj\Debug\BlogEngine.Tests.dll
 C:\Users\Ruslan\Src\Codeplex\be\BlogEngine\BlogEngine.Tests\obj\Debug\BlogEngine.Tests.pdb
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\bin\Debug\BlogEngine.Tests.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\bin\Debug\BlogEngine.Tests.pdb
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\bin\Debug\Interop.SHDocVw.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\bin\Debug\nunit.framework.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\bin\Debug\WatiN.Core.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\bin\Debug\nunit.framework.xml
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\bin\Debug\WatiN.Core.xml
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\obj\Debug\BlogEngine.Tests.csprojResolveAssemblyReference.cache
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\obj\Debug\BlogEngine.Tests.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\obj\Debug\BlogEngine.Tests.pdb

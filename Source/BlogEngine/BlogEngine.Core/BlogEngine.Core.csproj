@@ -19,7 +19,8 @@
     <SccProvider>
     </SccProvider>
     <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -325,7 +326,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DataStore\DataStore.cd" />
-    <None Include="key.snk" />
     <None Include="Ping\Ping.cd" />
     <None Include="Service References\GalleryServer\service.edmx" />
   </ItemGroup>
