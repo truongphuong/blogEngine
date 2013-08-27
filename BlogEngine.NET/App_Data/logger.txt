@@ -91,3 +91,6 @@ Error sending email in SendMailMessage:  Failure sending mail. The remote name c
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 Date: 4/20/2013 9:08:32 AM
 Error sending email in SendMailMessage:  Failure sending mail. The remote name could not be resolved: 'mail.example.com'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 8/27/2013 9:52:55 PM
+An item with the same key has already been added.
