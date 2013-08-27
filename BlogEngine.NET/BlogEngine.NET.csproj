@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BlogEngine.Core, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BlogEngine.Bin\BlogEngine.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -2433,12 +2437,6 @@
   <ItemGroup>
     <Folder Include="App_Data\files\2013\04\" />
     <Folder Include="bin\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BlogEngine.Core\BlogEngine.Core.csproj">
-      <Project>{9ED9914A-FB6E-4D21-8C71-9122E8C3076B}</Project>
-      <Name>BlogEngine.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\labels.af.resx">
