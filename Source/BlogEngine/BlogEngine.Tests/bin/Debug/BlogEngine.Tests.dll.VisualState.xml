@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1035]C:\Users\Ruslan\Src\Codeplex\be\BlogEngine\BlogEngine.Tests\bin\Debug\BlogEngine.Tests.dll</TopNode>
+  <SelectedNode>[0-1037]BlogEngine.Tests</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1035]C:\Users\Ruslan\Src\Codeplex\be\BlogEngine\BlogEngine.Tests\bin\Debug\BlogEngine.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1036]BlogEngine" Expanded="true" />
+    <Node UniqueName="[0-1037]BlogEngine.Tests" Expanded="true" />
+    <Node UniqueName="[0-1000]BlogEngine.Tests.Account.Login" Expanded="true" />
+  </Nodes>
+</VisualState>
