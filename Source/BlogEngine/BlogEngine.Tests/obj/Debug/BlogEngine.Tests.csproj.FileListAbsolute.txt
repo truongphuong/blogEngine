@@ -14,6 +14,5 @@ D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\bin\D
 D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\bin\Debug\WatiN.Core.dll
 D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\bin\Debug\nunit.framework.xml
 D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\bin\Debug\WatiN.Core.xml
-D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\obj\Debug\BlogEngine.Tests.csprojResolveAssemblyReference.cache
 D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\obj\Debug\BlogEngine.Tests.dll
 D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine\BlogEngine.Tests\obj\Debug\BlogEngine.Tests.pdb
