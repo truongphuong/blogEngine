@@ -523,7 +523,7 @@ namespace BlogEngine.Core
                     // instance.
                     // 
 
-                    string blogIdHeader = context.Request.Headers["x-blog-instance"];
+                    string blogIdHeader = context.Request.Headers["HTTP_X_FORWARDED_FOR"];
                     if (!string.IsNullOrWhiteSpace(blogIdHeader) && blogIdHeader.Length == 36)
                     {
                         blog = GetBlog(new Guid(blogIdHeader));

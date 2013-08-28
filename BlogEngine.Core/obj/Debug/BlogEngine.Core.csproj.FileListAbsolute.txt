@@ -34,3 +34,8 @@ D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine.Core\bin\Debug\BlogEng
 D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine.Core\obj\Debug\BlogEngine.Core.csprojResolveAssemblyReference.cache
 D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine.Core\obj\Debug\BlogEngine.Core.dll
 D:\Project\KuyamWeb\KuyamDev\blogEngine\Source\BlogEngine.Core\obj\Debug\BlogEngine.Core.pdb
+D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.Core\bin\Debug\BlogEngine.Core.XML
+D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.Core\bin\Debug\BlogEngine.Core.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.Core\bin\Debug\BlogEngine.Core.pdb
+D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.Core\obj\Debug\BlogEngine.Core.dll
+D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.Core\obj\Debug\BlogEngine.Core.pdb
