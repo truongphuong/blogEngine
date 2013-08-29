@@ -178,7 +178,7 @@ namespace BlogEngine.Core
                     }
                     else
                     {
-                        context.Response.Redirect(ToPublicUrl(Utils.AbsoluteWebRoot));
+                        context.Response.Redirect(ToPublicUrl(Utils.RelativeWebRoot));
                     }
 
                     return true;
@@ -225,7 +225,7 @@ namespace BlogEngine.Core
         /// </summary>
         /// <param name="relativeUri"></param>
         /// <returns></returns>
-        public static string ToPublicUrl(Uri relativeUri)
+        public static string ToPublicUrl(string relativeUri)
         {
 
             var httpContext = HttpContext.Current;
