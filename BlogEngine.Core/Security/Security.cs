@@ -238,7 +238,7 @@ namespace BlogEngine.Core
                 Scheme = "http",
             };
 
-            if (httpContext.Request.IsLocal)
+            if (httpContext.Request.Url.AbsoluteUri.Contains("localhost"))
             {
                 uriBuilder.Port = httpContext.Request.Url.Port;
             }
