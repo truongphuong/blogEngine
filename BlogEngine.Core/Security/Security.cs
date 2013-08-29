@@ -178,7 +178,7 @@ namespace BlogEngine.Core
                     }
                     else
                     {
-                        context.Response.Redirect(Utils.RelativeWebRoot);
+                        context.Response.Redirect(ToPublicUrl(Utils.AbsoluteWebRoot));
                     }
 
                     return true;
@@ -218,6 +218,32 @@ namespace BlogEngine.Core
             {
                 return Membership.GetUser();
             }
+        }
+
+        /// <summary>
+        /// Convert relative Url to public Url
+        /// </summary>
+        /// <param name="relativeUri"></param>
+        /// <returns></returns>
+        public static string ToPublicUrl(Uri relativeUri)
+        {
+
+            var httpContext = HttpContext.Current;
+            
+            var uriBuilder = new UriBuilder
+            {
+                Host = httpContext.Request.Url.Host,
+                Path = "/",
+                Port = 80,
+                Scheme = "http",
+            };
+
+            if (httpContext.Request.IsLocal)
+            {
+                uriBuilder.Port = httpContext.Request.Url.Port;
+            }
+
+            return new Uri(uriBuilder.Uri, relativeUri).AbsoluteUri;
         }
 
         /// <summary>

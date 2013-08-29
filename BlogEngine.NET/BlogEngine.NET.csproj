@@ -34,7 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BlogEngine.Core, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\BlogEngine.Bin\BlogEngine.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
