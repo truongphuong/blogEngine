@@ -116,7 +116,7 @@
         /// </summary>
         /// <param name="relativeUri"></param>
         /// <returns></returns>
-        public static Uri ToPublicUrl(string relativeUri)
+        public static string ToPublicUrl(string relativeUri)
         {
 
             var httpContext = HttpContext.Current;
@@ -134,7 +134,7 @@
                 uriBuilder.Port = httpContext.Request.Url.Port;
             }
 
-            return new Uri(uriBuilder.Uri, relativeUri);
+            return uriBuilder.Uri.ToString();
         }
 
         #region Properties
@@ -145,7 +145,7 @@
         /// <value>A string that ends with a '/'.</value>
         public static Uri AbsoluteWebRoot
         {
-            get { return ToPublicUrl(Blog.CurrentInstance.AbsoluteWebRoot.ToString()); }
+            get { return  new Uri(ToPublicUrl(Blog.CurrentInstance.AbsoluteWebRoot.ToString())); }
         }
 
         /// <summary>
