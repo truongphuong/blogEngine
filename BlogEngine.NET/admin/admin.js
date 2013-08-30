@@ -246,6 +246,7 @@ function LoadProfile() {
 
          $('#Container2').setTemplateURL(SiteVars.ApplicationRelativeWebRoot + 'Templates/profile2.htm', null, { filter_data: false });
          $('#Container2').processTemplate(msg);
+         app.initBiography();
       }
    });
 }
