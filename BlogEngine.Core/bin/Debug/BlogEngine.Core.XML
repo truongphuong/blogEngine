@@ -9740,6 +9740,13 @@
                 Boolean for returning whether or not BlogEngine is currently running on Mono.
             </summary>
         </member>
+        <member name="M:BlogEngine.Core.Utils.ToPublicUrl(System.String)">
+            <summary>
+            Convert relative Url to public Url
+            </summary>
+            <param name="relativeUri"></param>
+            <returns></returns>
+        </member>
         <member name="M:BlogEngine.Core.Utils.ShouldForceMainTheme(System.Web.HttpRequest)">
             <summary>
             Returns whether the main theme should be forced for the current mobile device.

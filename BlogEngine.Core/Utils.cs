@@ -111,6 +111,32 @@
 
         #endregion
 
+        /// <summary>
+        /// Convert relative Url to public Url
+        /// </summary>
+        /// <param name="relativeUri"></param>
+        /// <returns></returns>
+        public static Uri ToPublicUrl(string relativeUri)
+        {
+
+            var httpContext = HttpContext.Current;
+
+            var uriBuilder = new UriBuilder
+            {
+                Host = httpContext.Request.Url.Host,
+                Path = "/",
+                Port = 80,
+                Scheme = "http",
+            };
+
+            if (httpContext.Request.Url.AbsoluteUri.Contains("localhost"))
+            {
+                uriBuilder.Port = httpContext.Request.Url.Port;
+            }
+
+            return new Uri(uriBuilder.Uri, relativeUri);
+        }
+
         #region Properties
 
         /// <summary>
@@ -119,7 +145,7 @@
         /// <value>A string that ends with a '/'.</value>
         public static Uri AbsoluteWebRoot
         {
-            get { return Blog.CurrentInstance.AbsoluteWebRoot; }
+            get { return ToPublicUrl(Blog.CurrentInstance.AbsoluteWebRoot.ToString()); }
         }
 
         /// <summary>
@@ -197,7 +223,7 @@
         {
             get
             {
-                return Blog.CurrentInstance.RelativeWebRoot;
+                return ToPublicUrl(Blog.CurrentInstance.RelativeWebRoot).ToString();
             }
         }
 
@@ -209,9 +235,9 @@
         {
             get
             {
-                return applicationRelativeWebRoot ??
+                return ToPublicUrl(applicationRelativeWebRoot ??
                        (applicationRelativeWebRoot =
-                        VirtualPathUtility.ToAbsolute(BlogConfig.VirtualPath));
+                        VirtualPathUtility.ToAbsolute(BlogConfig.VirtualPath))).ToString();
             }
         }
 
