@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BlogEngine.Core, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="BlogEngine.Core">
       <HintPath>..\BlogEngine.Bin\BlogEngine.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />

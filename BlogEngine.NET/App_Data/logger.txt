@@ -94,3 +94,9 @@ Error sending email in SendMailMessage:  Failure sending mail. The remote name c
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 Date: 8/27/2013 9:52:55 PM
 An item with the same key has already been added.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 8/29/2013 5:39:25 PM
+Installed package Showcase by admin
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 8/29/2013 6:16:49 PM
+Installed package Flattr by admin

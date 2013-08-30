@@ -32,6 +32,8 @@ D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\bin\System.Web.Optimizati
 D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\bin\AjaxMin.dll
 D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\bin\BlogML.dll
 D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\bin\ICSharpCode.SharpZipLib.dll
-D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\obj\Debug\BlogEngine.NET.csprojResolveAssemblyReference.cache
 D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\obj\Debug\BlogEngine.NET.dll
 D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\obj\Debug\BlogEngine.NET.pdb
+D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\bin\BlogEngine.Core.pdb
+D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\bin\BlogEngine.Core.xml
+D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\obj\Debug\BlogEngine.NET.csprojResolveAssemblyReference.cache

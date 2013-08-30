@@ -432,8 +432,8 @@
             var dir = BlogService.GetDirectory(dirName);
             var file = BlogService.UploadFile(txtUploadImage.PostedFile.InputStream, txtUploadImage.FileName, dir, true);
 
-            txtContent.Text += string.Format("<img src=\"{0}image.axd?picture={1}\" />", Utils.RelativeWebRoot, Server.UrlEncode(file.AsImage.FilePath));
-            txtRawContent.Text += string.Format("<img src=\"{0}image.axd?picture={1}\" />", Utils.RelativeWebRoot, Server.UrlEncode(file.AsImage.FilePath));
+            txtContent.Text += string.Format("<img src=\"{0}image.axd?picture={1}\" />", Utils.AbsoluteWebRoot, Server.UrlEncode(file.AsImage.FilePath));
+            txtRawContent.Text += string.Format("<img src=\"{0}image.axd?picture={1}\" />", Utils.AbsoluteWebRoot, Server.UrlEncode(file.AsImage.FilePath));
         }
 
 		/// <summary>
