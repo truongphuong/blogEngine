@@ -4,7 +4,7 @@
     // Redirect back to the homepage or return URL
     var returnUrl = Request.QueryString["ReturnUrl"];
     if (returnUrl.IsEmpty()) {
-        Response.Redirect(BlogEngine.Core.Utils.RelativeWebRoot);
+        Response.Redirect(BlogEngine.Core.Utils.AbsoluteWebRoot.ToString());
     } else {
         Context.RedirectLocal(returnUrl);
     }
