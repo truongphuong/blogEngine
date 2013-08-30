@@ -223,7 +223,7 @@
         {
             get
             {
-                return ToPublicUrl(Blog.CurrentInstance.RelativeWebRoot).ToString();
+                return Blog.CurrentInstance.RelativeWebRoot;
             }
         }
 
@@ -235,9 +235,9 @@
         {
             get
             {
-                return ToPublicUrl(applicationRelativeWebRoot ??
+                return applicationRelativeWebRoot ??
                        (applicationRelativeWebRoot =
-                        VirtualPathUtility.ToAbsolute(BlogConfig.VirtualPath))).ToString();
+                        VirtualPathUtility.ToAbsolute(BlogConfig.VirtualPath));
             }
         }
 
