@@ -2547,6 +2547,7 @@
     <Content Include="App_GlobalResources\labels.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>labels.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="App_GlobalResources\labels.ru.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>

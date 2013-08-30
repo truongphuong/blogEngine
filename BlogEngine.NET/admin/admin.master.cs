@@ -109,11 +109,11 @@ namespace Admin
             if (Security.IsAuthenticated)
             {
                 aLogin.InnerText = Resources.labels.logoff;
-                aLogin.HRef = Utils.RelativeWebRoot + "Account/login.aspx?logoff";
+                aLogin.HRef = Utils.AbsoluteWebRoot + "Account/login.aspx?logoff";
             }
             else
             {
-                aLogin.HRef = Utils.RelativeWebRoot + "Account/login.aspx";
+                aLogin.HRef = Utils.AbsoluteWebRoot + "Account/login.aspx";
                 aLogin.InnerText = Resources.labels.login;
             }
 
