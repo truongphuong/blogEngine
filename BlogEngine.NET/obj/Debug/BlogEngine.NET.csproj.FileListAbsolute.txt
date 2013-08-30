@@ -37,5 +37,3 @@ D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\obj\Debug\BlogEngine.NET.
 D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\bin\BlogEngine.Core.pdb
 D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\bin\BlogEngine.Core.xml
 D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\obj\Debug\BlogEngine.NET.csprojResolveAssemblyReference.cache
-D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\bin\BlogEngine.NET.dll.CodeAnalysisLog.xml
-D:\Project\KuyamWeb\KuyamDev\blogEngine\BlogEngine.NET\bin\BlogEngine.NET.dll.lastcodeanalysissucceeded

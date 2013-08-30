@@ -43,7 +43,7 @@
                 }
                 else
                 {
-                    this.Response.Redirect(BlogEngine.Core.Utils.RelativeWebRoot);
+                    this.Response.Redirect(BlogEngine.Core.Utils.AbsoluteWebRoot.ToString());
                 }
 
                 return;
