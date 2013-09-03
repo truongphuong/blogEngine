@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using System.Configuration;
 using System.Configuration.Provider;
 using System.Data.Common;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
@@ -12,6 +13,7 @@ using System.Transactions;
 using BlogEngine.Core.DataStore;
 using BlogEngine.Core.Packaging;
 using BlogEngine.Core.Notes;
+using BlogEngine.Core.KuyamExtensions.Json;
 
 namespace BlogEngine.Core.Providers
 {
@@ -390,6 +392,7 @@ namespace BlogEngine.Core.Providers
         /// </returns>
         public override List<BlogRollItem> FillBlogRoll()
         {
+            //Trong
             var blogRoll = new List<BlogRollItem>();
 
             using (var conn = this.CreateConnection())
@@ -839,7 +842,7 @@ namespace BlogEngine.Core.Providers
                 if (conn.HasConnection)
                 {
                     var sqlQuery = string.Format("INSERT INTO {0}Pages (BlogID, PageID, Title, Description, PageContent, DateCreated, DateModified, Keywords, IsPublished, IsFrontPage, Parent, ShowInList, Slug, IsDeleted) VALUES ({1}blogid, {1}id, {1}title, {1}desc, {1}content, {1}created, {1}modified, {1}keywords, {1}ispublished, {1}isfrontpage, {1}parent, {1}showinlist, {1}slug, {1}isdeleted)", this.tablePrefix, this.parmPrefix);
-                   
+
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
 
@@ -1209,7 +1212,7 @@ namespace BlogEngine.Core.Providers
                     }
                 }
             }
-            
+
         }
 
         /// <summary>
@@ -2044,7 +2047,7 @@ namespace BlogEngine.Core.Providers
                     post.Author = userName;
                     string content = BlogGeneratorConfig.PostContent.Replace("&lt;", "<").Replace("&gt;", ">");
                     post.Content = content.Contains("{1}") ?
-                        string.Format(content, userName, Utils.RelativeWebRoot + newBlog.Name + "/Account/login.aspx") : content;       
+                        string.Format(content, userName, Utils.RelativeWebRoot + newBlog.Name + "/Account/login.aspx") : content;
                     InsertPost(post);
 
                     // be_posttags
@@ -2678,7 +2681,7 @@ namespace BlogEngine.Core.Providers
                         var parms = cmd.Parameters;
                         parms.Add(conn.CreateParameter(FormatParamName("PackageId"), package.PackageId));
                         parms.Add(conn.CreateParameter(FormatParamName("Version"), package.Version));
- 
+
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -3257,5 +3260,92 @@ namespace BlogEngine.Core.Providers
             return new DbConnectionHelper(settings);
         }
 
+        #region Getty Images
+
+        public override List<GettyImage> GetGettyByCustId(int userId)
+        {
+            var gettyImages = new List<GettyImage>();
+
+            using (var conn = CreateConnection())
+            {
+                if (conn.HasConnection)
+                {
+                    using (var cmd = conn.CreateTextCommand(string.Format("SELECT Id, UrlPreview,GettyImageId FROM be_GettyImages WHERE UserID = " + userId)))
+                    {
+                        using (var rdr = cmd.ExecuteReader())
+                        {
+                            while (rdr.Read())
+                            {
+                                var g = new GettyImage
+                                {
+                                    Id = rdr.GetInt32(0).ToString(CultureInfo.InvariantCulture),
+                                    UrlPreview = rdr.IsDBNull(1) ? string.Empty : rdr.GetString(1),
+                                    GettyImageId = rdr.IsDBNull(2) ? string.Empty : rdr.GetString(2),
+                                };
+                                gettyImages.Add(g);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return gettyImages;
+        }
+
+        public override int SaveGettyImages(GettyImage gettyImage)
+        {
+            int resuilt;
+
+            using (var conn = CreateConnection())
+            {
+
+                using (var cmd = conn.CreateCommand())
+                {
+
+                    var sqlQuery = string.Format("INSERT INTO {0}GettyImages (LocationData, UserID, UrlPreview,GettyImageId) VALUES ({1}LocationData, {1}UserID, {1}UrlPreview,{1}GettyImageId)", this.tablePrefix, this.parmPrefix);
+
+                    cmd.CommandText = sqlQuery;
+                    cmd.Parameters.Clear();
+
+                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("LocationData"), gettyImage.LocationData));
+                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("UserID"), gettyImage.UserId));
+                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("UrlPreview"), gettyImage.UrlPreview));
+                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("GettyImageId"), gettyImage.GettyImageId));
+
+                    cmd.ExecuteNonQuery();
+
+                    resuilt = 0;
+                }
+            }
+
+            return resuilt;
+
+        }
+
+        public override int GetUserIdByEmail(string email)
+        {
+            var resuilt = string.Empty;
+            using (var conn = CreateConnection())
+            {
+                if (conn.HasConnection)
+                {
+                    using (var cmd = conn.CreateTextCommand(string.Format("SELECT * FROM be_Users WHERE EmailAddress = " + "'" + email + "'")))
+                    {
+                        using (var rdr = cmd.ExecuteReader())
+                        {
+                            while (rdr.Read())
+                            {
+                                resuilt = rdr.GetInt32(0).ToString(CultureInfo.InvariantCulture);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return int.Parse(resuilt);
+
+        }
+
+        #endregion
     }
 }

@@ -108,5 +108,19 @@
 
         }
 
+
+        public override List<KuyamExtensions.Json.GettyImage> GetGettyByCustId(int custId)
+        {
+            throw new NotImplementedException();
+        }
+        public override int SaveGettyImages(KuyamExtensions.Json.GettyImage gettyImage)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override int GetUserIdByEmail(string email)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

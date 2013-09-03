@@ -1,0 +1,6 @@
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.KalturaClient\KalturaClient\bin\KalturaClient.dll
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.KalturaClient\KalturaClient\bin\KalturaClient.pdb
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.KalturaClient\KalturaClient\obj\Release\KalturaClient.dll
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.KalturaClient\KalturaClient\obj\Release\KalturaClient.pdb
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.KalturaClient\KalturaClient\bin\Release\KalturaClient.dll
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.KalturaClient\KalturaClient\bin\Release\KalturaClient.pdb

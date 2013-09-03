@@ -732,7 +732,8 @@
 
 	// Note: to use this within an iframe use the following format: parent.$.fn.colorbox.close();
 	publicMethod.close = function () {
-		if (open && !closing) {
+	    if (open && !closing) {
+	        $(".popupGettyImage").css("display", "none");
 			closing = true;
 			
 			open = false;
