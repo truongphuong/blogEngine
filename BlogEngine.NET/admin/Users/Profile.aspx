@@ -34,14 +34,24 @@
 		</div>
 	</div>
     <script type="text/javascript" src="../jquery.tipsy.js"></script>
+    <link href="<%=Utils.RelativeWebRoot %>Content/themes/base/minified/jquery-ui.min.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="<%=Utils.RelativeWebRoot %>editors/tiny_mce_3_5_8/tiny_mce.js"></script>
+    <script src="<%=Utils.RelativeWebRoot %>Content/ckeditor/ckeditor.js" type="text/javascript"></script>
+    <script src="<%=Utils.RelativeWebRoot %>Scripts/jquery-ui.js" type="text/javascript"></script>
     <script type="text/javascript">
         var app = app || {};
+        app.biography = '';
+        app.initForm = function () {
+            $('#txtBirthday').datepicker({ minDate: "-99Y", maxDate: "-18Y" });
+            debugger;
+            //$('#biography').ckeditor();
+            app.biography = CKEDITOR.replace('biography');
+        }
         app.initBiography = function () {
             tinyMCE.init({
                 // General options
                 mode: "exact",
-                elements: "biography",
+                elements: "biography1",
                 encoding: "xml",
                 theme: "advanced",
                 plugins: "inlinepopups,fullscreen,contextmenu,emotions,table,iespell,advlink,syntaxhighlighter",
@@ -101,7 +111,7 @@
             var city = $('#txtCity').val();
             var state = $('#txtState').val();
             var country = $('#txtCountry').val();
-            var biography = tinyMCE.activeEditor.getContent();
+            var biography = app.biography.getData(); //tinyMCE.activeEditor.getContent();
 
             if (displayName.length == 0) {
                 $('#txtDispalayNameReq').removeClass('hidden');
@@ -127,6 +137,7 @@
             vals[11] = city;
             vals[12] = state;
             vals[13] = country;
+            debugger;
             vals[14] = biography;
 
             var dto = { "id": Querystring('id'), "vals": vals, "roles": roles };
