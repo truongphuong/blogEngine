@@ -234,20 +234,21 @@ function LoadGenericPager(page, url) {
 function LoadProfile() {
    var dto = { "id": Querystring('id') };
    $.ajax({
-      url: SiteVars.ApplicationRelativeWebRoot + "admin/Users/Profile.aspx/GetProfile",
-      data: JSON.stringify(dto),
-      type: "POST",
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      beforeSend: onAjaxBeforeSend,
-      success: function (msg) {
-         $('#Container').setTemplateURL(SiteVars.ApplicationRelativeWebRoot + 'Templates/profile.htm', null, { filter_data: false });
-         $('#Container').processTemplate(msg);
+       url: SiteVars.ApplicationRelativeWebRoot + "admin/Users/Profile.aspx/GetProfile",
+       data: JSON.stringify(dto),
+       type: "POST",
+       contentType: "application/json; charset=utf-8",
+       dataType: "json",
+       beforeSend: onAjaxBeforeSend,
+       success: function (msg) {
+           $('#Container').setTemplateURL(SiteVars.ApplicationRelativeWebRoot + 'Templates/profile.htm', null, { filter_data: false });
+           $('#Container').processTemplate(msg);
 
-         $('#Container2').setTemplateURL(SiteVars.ApplicationRelativeWebRoot + 'Templates/profile2.htm', null, { filter_data: false });
-         $('#Container2').processTemplate(msg);
-         app.initBiography();
-      }
+           $('#Container2').setTemplateURL(SiteVars.ApplicationRelativeWebRoot + 'Templates/profile2.htm', null, { filter_data: false });
+           $('#Container2').processTemplate(msg);
+           //app.initBiography();
+           app.initForm();
+       }
    });
 }
 
