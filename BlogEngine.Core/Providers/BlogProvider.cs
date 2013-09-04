@@ -8,6 +8,7 @@
     using DataStore;
     using Packaging;
     using Notes;
+    using BlogEngine.Core.KuyamExtensions.Json;
 
     /// <summary>
     /// A base class for all custom providers to inherit from.
@@ -453,5 +454,25 @@
         #endregion
 
         #endregion
+
+        /// <summary>
+        /// Get all getty image by cust id
+        /// </summary>
+        /// <param name="custId">int: cust id</param>
+        public abstract List<GettyImage> GetGettyByCustId(int custId);
+
+        /// <summary>
+        /// Save getty image
+        /// </summary>
+        /// <param name="gettyImage">GettyImage: gettyImage</param>
+        public abstract int SaveGettyImages(GettyImage gettyImage);
+
+        /// <summary>
+        /// Get User Id By Email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public abstract int GetUserIdByEmail(string email);
+
     }
 }

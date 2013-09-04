@@ -1,4 +1,7 @@
-﻿using BlogEngine.Core.Packaging;
+﻿using System.Globalization;
+using BlogEngine.Core.KuyamExtensions.Json;
+using BlogEngine.Core.Packaging;
+using BlogEngine.Core.Providers;
 
 namespace Admin
 {
@@ -505,6 +508,67 @@ namespace Admin
 
             return Installer.UninstallPackage(pkgId);
         }
+        //Trong edded
+        [WebMethod]
+        public static IEnumerable LoadGetttyImages(string key){
+            var gettyImages = new GettyImages();
+            if (string.IsNullOrEmpty(key)){
+                return new List<GettyImage>();
+            }
+            if (!WebUtils.CheckRightsForAdminPostPages(false)) { return null; }
+            if (!WebUtils.CheckIfPrimaryBlog(false)) { return null; }
 
+            //Get 50 images from getty images by API
+            var imageResults = gettyImages.GetGettyImages(key);
+            return imageResults;
+        }
+
+        [WebMethod]
+        public static IEnumerable LoadGetttyImagesClient(string custId){
+            if (!WebUtils.CheckRightsForAdminPostPages(false)) { return null; }
+            if (!WebUtils.CheckIfPrimaryBlog(false)) { return null; }
+
+            var gettyImages = new GettyImages();
+            var userId = gettyImages.GetUserIdByEmail(Security.CurrentMembershipUser.Email);
+            var imageResults = gettyImages.LoadGetttyImagesClient(userId);
+            return imageResults;
+        }
+
+        [WebMethod]
+        public static IEnumerable UploadImageToKaltura(string urlPreview, string gettyImageId)
+        {
+            var gettyImages = new GettyImages();
+            var userId = gettyImages.GetUserIdByEmail(Security.CurrentMembershipUser.Email);
+            var gettyImage = new GettyImage{
+                UrlPreview = urlPreview,
+                GettyImageId = gettyImageId,
+                UserId = userId.ToString(CultureInfo.InvariantCulture)
+            };
+            
+            var kalturaId = gettyImages.UploadToKaltural(gettyImage);
+            if (!string.IsNullOrEmpty(kalturaId)){
+                gettyImage.LocationData = kalturaId;
+                var imageResults = gettyImages.LoadGetttyImagesClient(userId);
+                var insertResults = gettyImages.InsertGetttyImagesClient(gettyImage);    
+            }
+            return null;
+        }
+
+        [WebMethod]
+        public static IEnumerable DownloadKalturaImages(string urlPreview){
+            var gettyImages = new GettyImages();
+            var fileName = string.Format("{0}.jpg", DateTime.UtcNow.ToString("ddMMyyyyhmmss"));
+            //Download file from kaltura
+            var fullFilePath = gettyImages.DownloadImage(urlPreview, fileName);
+            var fileStream = new FileStream(fullFilePath, FileMode.Open, FileAccess.Read);
+            //Upload image to db
+            var dirName = string.Format("/{0}/{1}", DateTime.Now.ToString("yyyy"), DateTime.Now.ToString("MM"));
+            var dir = BlogService.GetDirectory(dirName);
+            var file = BlogService.UploadFile(fileStream, fileName, dir, true);
+            //Delete file
+            gettyImages.DeleteFile(fullFilePath);
+
+            return file.AsImage.FilePath;
+        }
     }
 }

@@ -1,0 +1,10 @@
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.KalturaClient\bin\Debug\KalturaClient.dll
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.KalturaClient\bin\Debug\KalturaClient.pdb
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.KalturaClient\obj\Debug\BlogEngine.KalturaClient.csprojResolveAssemblyReference.cache
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.KalturaClient\obj\Debug\KalturaClient.dll
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.KalturaClient\obj\Debug\KalturaClient.pdb
+D:\Projects\Kuyam\blogEngine\BlogEngine.KalturaClient\bin\Debug\KalturaClient.dll
+D:\Projects\Kuyam\blogEngine\BlogEngine.KalturaClient\bin\Debug\KalturaClient.pdb
+D:\Projects\Kuyam\blogEngine\BlogEngine.KalturaClient\obj\Debug\KalturaClient.dll
+D:\Projects\Kuyam\blogEngine\BlogEngine.KalturaClient\obj\Debug\KalturaClient.pdb
+D:\Projects\Kuyam\blogEngine\BlogEngine.KalturaClient\obj\Debug\BlogEngine.KalturaClient.csprojResolveAssemblyReference.cache

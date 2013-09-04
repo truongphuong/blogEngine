@@ -1993,6 +1993,9 @@
   <data name="fileManager" xml:space="preserve">
     <value>File Manager</value>
   </data>
+  <data name="gettyImages" xml:space="preserve">
+    <value>Insert Getty Images</value>
+  </data>
   <data name="emptyLog" xml:space="preserve">
     <value>Empty the log file</value>
   </data>

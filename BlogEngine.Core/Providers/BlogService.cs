@@ -11,6 +11,7 @@ namespace BlogEngine.Core.Providers
     using BlogEngine.Core.DataStore;
     using BlogEngine.Core.FileSystem;   
     using Notes;
+    using BlogEngine.Core.KuyamExtensions.Json;
 
     /// <summary>
     /// The proxy class for communication between
@@ -974,5 +975,38 @@ namespace BlogEngine.Core.Providers
         }
 
         #endregion
+
+
+        #region Getty Images
+
+        /// <summary>
+        /// Get All Getty Images By Cust Id
+        /// </summary>
+        /// <param name="custId"></param>
+        /// <returns></returns>
+        public static List<GettyImage> GetAllGettyImagesByCustId(int custId)
+        {
+            return Provider.GetGettyByCustId(custId);
+        }
+
+
+        /// <summary>
+        /// InsertGettyImages
+        /// </summary>
+        /// <param name="gettyImage"></param>
+        /// <returns></returns>
+        public static int InsertGettyImages(GettyImage gettyImage)
+        {
+            return Provider.SaveGettyImages(gettyImage);
+        }
+
+        /// <summary>
+        /// GetUserIdByEmail
+        /// </summary>
+        /// <returns></returns>
+        public static int GetUserIdByEmail(string email){
+            return Provider.GetUserIdByEmail(email);
+        }
+        #endregion 
     }
 }

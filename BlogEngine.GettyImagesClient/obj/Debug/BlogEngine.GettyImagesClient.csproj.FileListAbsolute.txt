@@ -1,0 +1,10 @@
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.GettyImagesClient\bin\Debug\BlogEngine.GettyImagesClient.dll
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.GettyImagesClient\bin\Debug\BlogEngine.GettyImagesClient.pdb
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.GettyImagesClient\obj\Debug\BlogEngine.GettyImagesClient.csprojResolveAssemblyReference.cache
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.GettyImagesClient\obj\Debug\BlogEngine.GettyImagesClient.dll
+D:\Projects\BlogEngine2.8\Source\BlogEngine\BlogEngine.GettyImagesClient\obj\Debug\BlogEngine.GettyImagesClient.pdb
+D:\Projects\Kuyam\blogEngine\BlogEngine.GettyImagesClient\bin\Debug\BlogEngine.GettyImagesClient.dll
+D:\Projects\Kuyam\blogEngine\BlogEngine.GettyImagesClient\bin\Debug\BlogEngine.GettyImagesClient.pdb
+D:\Projects\Kuyam\blogEngine\BlogEngine.GettyImagesClient\obj\Debug\BlogEngine.GettyImagesClient.dll
+D:\Projects\Kuyam\blogEngine\BlogEngine.GettyImagesClient\obj\Debug\BlogEngine.GettyImagesClient.pdb
+D:\Projects\Kuyam\blogEngine\BlogEngine.GettyImagesClient\obj\Debug\BlogEngine.GettyImagesClient.csprojResolveAssemblyReference.cache
